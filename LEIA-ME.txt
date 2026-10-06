@@ -1,0 +1,14 @@
+Site "Mapas" – Diretoria de Verificação Independente
+
+Estrutura:
+  index.html              -> menu inicial (abra este arquivo)
+  vi-previa/index.html    -> painel "Projetos e Concessões" (VI HOUER), com os arquivos de dados originais
+  livro-azul/index.html   -> painel "Livro Azul 2025" (613 projetos de concessão e PPP – ABDIB)
+
+Como publicar no GitHub Pages:
+  1. Envie a pasta inteira (mantendo as subpastas) para um repositório.
+  2. Em Settings > Pages, escolha a branch e a pasta raiz.
+  3. O endereço do site abrirá direto no menu.
+
+Os painéis usam internet para carregar o mapa (Leaflet), as fontes e, no painel VI, os contornos dos municípios do IBGE.
+Cada painel tem um botão "← Menu" no cabeçalho para voltar ao início.

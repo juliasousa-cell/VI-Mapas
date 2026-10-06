@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapas — Diretoria de Verificação Independente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f4f4; --line:#e3e3e3; --card-a:#062a4d; --card-b:#0a5a9c; --on-card:#ffffff;
+  --btn:#ffffff; --btn-border:#9db5dd; --btn-text:#0f2b4c; --btn-sub:#5b6f8a; --focus:#1d5fb8;
+  --display:'Archivo Black','Arial Black','Segoe UI',Arial,sans-serif;
+  --body:'Noto Sans','Segoe UI',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--body);background:var(--bg);color:var(--btn-text);display:flex;align-items:center;justify-content:center;
+     padding:32px 24px;position:relative;overflow-x:hidden;min-height:100%}
+.fundo{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.fundo path{fill:none;stroke:var(--line);stroke-width:2}
+.menu{position:relative;z-index:1;width:100%;max-width:1560px;display:grid;grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);gap:72px;align-items:center}
+.capa{position:relative;overflow:hidden;border-radius:12px;aspect-ratio:828/756;max-height:78vh;width:100%;
+      background:linear-gradient(135deg,var(--card-a) 0%,#07457a 55%,var(--card-b) 100%);
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(48px,11vh,150px);
+      padding:40px 32px;text-align:center;color:var(--on-card);box-shadow:0 10px 30px rgba(6,42,77,.18)}
+.capa svg{position:absolute;inset:0;width:100%;height:100%}
+.capa h1,.capa h2{position:relative;font-family:var(--display);font-weight:400;letter-spacing:.02em;line-height:1.28;text-wrap:balance}
+.capa h1{font-size:clamp(24px,3.3vw,52px)}
+.capa h2{font-size:clamp(22px,2.9vw,46px);letter-spacing:.04em}
+.opcoes{display:flex;flex-direction:column;gap:clamp(28px,7vh,120px)}
+.opcao{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:clamp(120px,17vh,196px);padding:24px;
+       background:var(--btn);border:1.5px solid var(--btn-border);border-radius:16px;text-decoration:none;color:var(--btn-text);text-align:center;
+       transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.opcao:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(15,43,76,.14);border-color:var(--focus)}
+.opcao:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.opcao .nome{font-size:clamp(26px,3vw,50px);font-weight:700;line-height:1.15;text-wrap:balance}
+.opcao .sub{font-size:clamp(12px,1vw,15px);font-weight:600;color:var(--btn-sub);letter-spacing:.02em}
+@media (prefers-reduced-motion:reduce){.opcao{transition:none}.opcao:hover{transform:none}}
+@media (max-width:860px){
+  .menu{grid-template-columns:1fr;gap:28px}
+  .capa{aspect-ratio:auto;min-height:300px;gap:40px}
+  .opcoes{gap:20px}
+}
+</style>
+</head>
+<body>
+<svg class="fundo" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <path d="M0 160 C 60 -20, 120 -40, 160 -60"/>
+  <path d="M230 1200 C 120 900, 160 300, 330 -20"/>
+  <path d="M470 1200 C 380 900, 420 400, 600 -20"/>
+  <path d="M690 1200 C 610 880, 640 420, 900 -20"/>
+  <path d="M880 1200 C 820 760, 900 300, 1180 120 C 1380 20, 1560 120, 1640 300"/>
+  <path d="M960 1200 C 900 820, 980 380, 1290 300 C 1480 260, 1580 360, 1640 460"/>
+</svg>
+
+<main class="menu">
+  <section class="capa" aria-label="Diretoria de Verificação Independente — Mapas">
+    <svg viewBox="0 0 828 756" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0 H140 C 60 160, 20 330, 120 520 C 200 670, 260 720, 300 756 H0 Z" fill="#041f3a" opacity=".35"/>
+      <path d="M330 0 C 200 160, 120 330, 160 560 C 180 650, 230 720, 260 756 H560 C 470 650, 380 520, 380 420 C 380 250, 460 110, 520 0 Z" fill="#ffffff" opacity=".045"/>
+      <path d="M520 0 C 460 110, 380 250, 380 420 C 380 520, 470 650, 560 756 H828 V0 Z" fill="#0d68b0" opacity=".25"/>
+      <path d="M760 0 C 690 150, 620 300, 640 450 C 660 600, 740 700, 790 756 H828 V0 Z" fill="#ffffff" opacity=".05"/>
+    </svg>
+    <h1>Diretoria de Verificação<br>Independente</h1>
+    <h2>MAPAS</h2>
+  </section>
+
+  <nav class="opcoes" aria-label="Escolha o mapa">
+    <a class="opcao" href="vi-previa/index.html">
+      <span class="nome">Projetos e Concessões</span>
+      <span class="sub">Concessões, municípios atendidos e população</span>
+    </a>
+    <a class="opcao" href="livro-azul/index.html">
+      <span class="nome">Livro Azul 2025</span>
+      <span class="sub">613 projetos de concessão e PPP · ABDIB</span>
+    </a>
+  </nav>
+</main>
+</body>
+</html>
